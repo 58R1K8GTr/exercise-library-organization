@@ -43,6 +43,8 @@ const oldBooks = (year) => {
 // Requisito 6
 const authorWith3DotsOnName = () => {
   // escreva seu código aqui
+  return books
+    .find(({ author: { name }}) => name.match(/\w\. \w\. \w\..*/)).name;
 };
 
 module.exports = {
