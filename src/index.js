@@ -26,6 +26,10 @@ const booksByAuthorBirthYear = (birthYear) => {
 // Requisito 4
 const fantasyOrScienceFictionAuthors = () => {
   // escreva seu código aqui
+  return books
+    .filter(({ genre }) => ['Ficção Científica', 'Fantasia'].includes(genre))
+    .map(({ author: { name } }) => name)
+    .sort();
 };
 
 // Requisito 5
