@@ -44,7 +44,7 @@ const oldBooks = (year) => {
 const authorWith3DotsOnName = () => {
   // escreva seu código aqui
   return books
-    .find(({ author: { name }}) => name.match(/\w\. \w\. \w\..*/)).name;
+    .find(({ author: { name }}) => (name.match(/\./g)).length === 3).name;
 };
 
 module.exports = {
