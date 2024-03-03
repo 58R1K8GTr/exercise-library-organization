@@ -35,6 +35,9 @@ const fantasyOrScienceFictionAuthors = () => {
 // Requisito 5
 const oldBooks = (year) => {
   // escreva seu código aqui
+  return books
+    .filter(({ releaseYear }) => year - releaseYear > 60)
+    .map(({ name }) => name);
 };
 
 // Requisito 6
