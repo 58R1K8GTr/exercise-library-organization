@@ -13,7 +13,9 @@ const oldBooksOrdered = (year) => {
   // escreva seu código aqui
   const result = books
     .filter(({ releaseYear }) => year - releaseYear > 60)
-    .sort(({ releaseYear }) => -releaseYear);
+    .sort(
+      ({ releaseYear }, { releaseYear: releaseYear2 }) => releaseYear - releaseYear2,
+    );
   return result;
 };
 
